@@ -201,3 +201,74 @@ This project is part of the **CertifyMe Full Stack Intern Assessment**. The repo
 - Delete permanently from the database
 - Remove from UI immediately **without page refresh**
 - Only the creator admin can delete their own opportunity
+
+## ✅ My Implementation
+
+### 🔧 Backend Development
+
+I developed the backend using Flask to support the existing Admin Portal UI without modifying any frontend code, as required in the assignment.
+
+---
+
+### 🔐 Authentication
+
+* Implemented Admin Signup with validation and password hashing
+* Implemented Login using Flask-Login for session management
+* Added Forgot Password functionality using token-based reset (valid for 1 hour)
+* Implemented Reset Password securely
+
+---
+
+### 📦 Opportunity Management (CRUD)
+
+* Created APIs for adding, viewing, updating, and deleting opportunities
+* Each opportunity is linked to the logged-in admin using `admin_id`
+* Implemented ownership checks to ensure admins access only their data
+* Data is stored in SQLite database (no hardcoded data)
+
+---
+
+### 🔄 API Design
+
+* All APIs return JSON responses using `jsonify()`
+* Designed to support dynamic frontend updates without page refresh
+
+---
+
+### 🧪 Testing
+
+* Tested all APIs using Postman
+* Verified authentication flow and session handling using cookies
+* Tested edge cases like invalid login and unauthorized access
+
+---
+
+### 🛠 Tech Stack Used
+
+* Python
+* Flask
+* Flask-SQLAlchemy
+* Flask-Login
+* SQLite
+
+---
+
+### 🚀 How to Run the Project
+
+```bash
+git clone <your-repository-link>
+cd Test1
+python -m venv venv
+source venv/Scripts/activate
+pip install -r requirements.txt
+python app.py
+```
+
+---
+
+### 📌 Notes
+
+* Frontend code was not modified as per assignment instructions
+* Backend routes were implemented to match frontend API calls
+
+
